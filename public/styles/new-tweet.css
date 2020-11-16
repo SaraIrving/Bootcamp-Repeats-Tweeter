@@ -11,7 +11,7 @@ textarea {
   border: none;
   border-bottom: 2px solid black;
   width: 100%;
-  background-color: #f4f1ec;
+  background-color: transparent;
 }
 
 /* the div that wraps the button and counter */
