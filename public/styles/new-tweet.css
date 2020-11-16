@@ -1,0 +1,19 @@
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5em;
+  /* background-color: fuchsia; */
+}
+
+form {
+  /* background-color: pink; */
+}
+
+textarea {
+  border: none;
+  border-bottom: 2px solid black;
+  width: 100%;
+  background-color: #f4f1ec;
+}
