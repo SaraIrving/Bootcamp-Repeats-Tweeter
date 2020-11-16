@@ -4,16 +4,22 @@ nav {
   color: #FFFFFF;
   background-color: #4056A1;
   padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
 
 
 nav .logo {
   font-family: 'Bungee', sans-serif;
-  color: fuchsia;
 }
 
-
+nav a {
+  text-decoration: none;
+  color: white;
+}
 
 
 
