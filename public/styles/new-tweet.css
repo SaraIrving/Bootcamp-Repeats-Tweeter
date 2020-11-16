@@ -7,13 +7,21 @@
   /* background-color: fuchsia; */
 }
 
-form {
-  /* background-color: pink; */
-}
-
 textarea {
   border: none;
   border-bottom: 2px solid black;
   width: 100%;
   background-color: #f4f1ec;
+}
+
+/* the div that wraps the button and counter */
+form div {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', sans-serif;
+}
+
+form div button {
+  background-color: #4056A1;
+  color: white;
 }
