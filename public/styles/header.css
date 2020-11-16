@@ -1,0 +1,10 @@
+
+header {
+  height: 400px;
+  background-color: #0051a8;
+  background-image: url("https://www.transparenttextures.com/patterns/light-honeycomb.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
