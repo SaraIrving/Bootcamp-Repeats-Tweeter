@@ -1,17 +1,19 @@
 
-/* styling for nav bar */
-/* nav span {
-  font-family: 'Bungee', sans-serif;
-}; */
-
-.logo-wrapper {
-  font-family: 'Bungee', sans-serif;
-}
-
-.nav-bar {
+nav {
   height: 120px;
   color: #FFFFFF;
   background-color: #4056A1;
   padding: 1.5em;
-};
+}
+
+
+
+nav .logo {
+  font-family: 'Bungee', sans-serif;
+  color: fuchsia;
+}
+
+
+
+
 
