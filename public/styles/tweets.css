@@ -3,7 +3,15 @@
   border: 3px solid black;
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  padding: 0.5em;
+  width: 90%;
+  margin-bottom: 20px;
+  filter: blur(1px);
+}
+
+.tweet-container:hover {
+  box-shadow: 8px 8px lightgrey;
+  filter: none;
 }
 
 .tweet-container article header {
@@ -17,6 +25,15 @@
   align-items: center;
 }
 
+.tweet-container:hover .handle {
+  display: block;
+  color: gray;
+}
+
+.handle {
+  display: none;
+}
+
 .avatar-name-wrapper img {
   padding-right: 10px;
 }
@@ -24,4 +41,16 @@
 .tweet-body {
   border: none;
   border-bottom: 3px solid black;
+  font-weight: 600;
+}
+
+.icons {
+  color:#4056A1;
+}
+
+.tweet-container article footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: small;
 }
