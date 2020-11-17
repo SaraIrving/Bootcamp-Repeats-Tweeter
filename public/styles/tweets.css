@@ -1,0 +1,27 @@
+
+.tweet-container {
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.tweet-container article header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.avatar-name-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-name-wrapper img {
+  padding-right: 10px;
+}
+
+.tweet-body {
+  border: none;
+  border-bottom: 3px solid black;
+}
