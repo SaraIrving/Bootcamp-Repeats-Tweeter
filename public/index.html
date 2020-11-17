@@ -38,7 +38,7 @@
       <span class="logo">tweeter</span>
       <a href="#">Write a new tweet!</a>
     </nav>
-    <header>
+    <header class="page-header">
       <div>
         <img src="images/profile-hex.png">
       </div>
@@ -52,7 +52,7 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form action="/tweets" method="POST" id="tweet-form">
+        <form action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
@@ -60,6 +60,24 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section class="tweet-container">
+        <article>
+          <header>
+            <img src="#" alt="*PIC*">
+            <p>Sample Name</p>
+            <p>@Handle</p>
+
+          </header>
+          <body>
+
+          </body>
+          <footer>
+  
+          </footer>
+
+        </article>
+       
       </section>
     </main>
   </body>
