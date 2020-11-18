@@ -21,7 +21,7 @@
   const createTweetElement = function(tweetObject) {
   
     const $tweet = `
-                    <article>
+                    <article class="tweet-article">
                     <header>
                       <div class="avatar-name-wrapper">
                         <img src=${tweetObject.user.avatars} alt="*PIC*">
