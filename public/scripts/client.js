@@ -45,12 +45,14 @@ const data = [
     }
   ];
 
+  //this function formats timestamp into a fuzzy date
   const formatDate = function(timestamp) {
     const dateCreated = moment(timestamp).fromNow();
 
     return dateCreated;
   };
 
+  // this function returns the html structure of the individual tweets
   const createTweetElement = function(tweetObject) {
   
     const $tweet = `
@@ -79,8 +81,8 @@ const data = [
   };
 
 
+  // this function renders all the posted tweets in the tweet-container section tag
   const renderTweets = function(tweetArray) {
-
     //loop through array and pull out each tweet object
     for (let tweetObj of tweetArray) {
       // create the html for that tweet
