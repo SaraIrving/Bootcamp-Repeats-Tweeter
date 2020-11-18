@@ -1,5 +1,5 @@
 
-.tweet-container {
+.tweet-article {
   border: 3px solid black;
   display: flex;
   flex-direction: column;
@@ -9,12 +9,12 @@
   filter: blur(1px);
 }
 
-.tweet-container:hover {
+.tweet-article:hover {
   box-shadow: 8px 8px lightgrey;
   filter: none;
 }
 
-.tweet-container article header {
+.tweet-article header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,7 +25,7 @@
   align-items: center;
 }
 
-.tweet-container:hover .handle {
+.tweet-article:hover .handle {
   display: block;
   color: gray;
 }
@@ -48,7 +48,7 @@
   color:#4056A1;
 }
 
-.tweet-container article footer {
+.tweet-article footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
