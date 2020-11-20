@@ -36,3 +36,8 @@ form div button {
   padding: 1em;
 }
 
+@media only screen and (min-width: 1024px) {
+  .tweet-form {
+    margin-top: 30px;
+  }
+}
