@@ -54,6 +54,8 @@
 
   // this function returns the html structure of the individual tweets
   const createTweetElement = function(tweetObject) {
+
+    console.log("tweetObject = ", tweetObject)
   
     const $tweet = `
                     <article class="tweet-article">
@@ -118,6 +120,7 @@
             type: "GET", 
             dataType: "json"})
       .then((res) => {
+        console.log('res = ', res)
         renderTweets(res);
       })
          
