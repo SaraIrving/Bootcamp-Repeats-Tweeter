@@ -110,6 +110,8 @@
       .then((response) => {
         console.log("success!");
         loadTweets();
+        $("#tweet-text").val("");
+        $(".counter").val(140);
         
       });
   });
