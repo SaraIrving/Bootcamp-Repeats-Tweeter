@@ -25,3 +25,14 @@ form div button {
   background-color: #4056A1;
   color: white;
 }
+
+/* styling for tweet submission errors */
+.empty-alert, .over-alert {
+  display: none;
+  font-family: 'Bungee', sans-serif;
+  color: fuchsia;
+  border: 3px dotted fuchsia;
+  font-size: large;
+  padding: 1em;
+}
+
