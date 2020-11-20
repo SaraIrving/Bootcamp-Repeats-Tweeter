@@ -20,30 +20,30 @@
   };
 
   // Fake data taken from initial-tweets.json
-const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
+// const data = [
+//     {
+//       "user": {
+//         "name": "Newton",
+//         "avatars": "https://i.imgur.com/73hZDYK.png"
+//         ,
+//         "handle": "@SirIsaac"
+//       },
+//       "content": {
+//         "text": "If I have seen further it is by standing on the shoulders of giants"
+//       },
+//       "created_at": 1461116232227
+//     },
+//     {
+//       "user": {
+//         "name": "Descartes",
+//         "avatars": "https://i.imgur.com/nlhLi3I.png",
+//         "handle": "@rd" },
+//       "content": {
+//         "text": "Je pense , donc je suis"
+//       },
+//       "created_at": 1461113959088
+//     }
+//   ];
 
   //this function formats timestamp into a fuzzy date
   const formatDate = function(timestamp) {
@@ -93,10 +93,9 @@ const data = [
     };
   };
 
-  renderTweets(data);
+  //renderTweets(data);
 
-  //const $formButton = $(".submitButton");
-  
+  // AJAX POST request to add new tweet 
   $(".tweet-form").submit(function(event) {
     event.preventDefault();
     console.log("form has been submitted!");
@@ -106,7 +105,23 @@ const data = [
           data: $(this).serialize()})
       .then((response) => {
         console.log("success!")
+        //loadTweets()
+        
+      });
+  });
+
+  // AJAX GET request to get all tweets 
+  const loadTweets = function() {
+    console.log("load tweets runs")
+    $.ajax({
+            url: "/tweets",
+            type: "GET", 
+            dataType: "json"})
+      .then((res) => {
+        renderTweets(res);
       })
-  })
+         
+  }
+  loadTweets();
 
  });
