@@ -103,12 +103,17 @@
   $(".tweet-form").submit(function(event) {
     event.preventDefault();
 
-    //validation
-    $(".empty-alert").slideUp(1000)
+    //validation of form submission
+    $(".empty-alert").slideUp(1000);
+    $(".over-alert").slideUp(1000);
 
- if($("#tweet-text").val().length <= 0) {
-   $(".empty-alert").slideDown(500)
- }
+    if($("#tweet-text").val().length <= 0) {
+      $(".empty-alert").slideDown(250);
+    }
+
+    if($("#tweet-text").val().length > 140) {
+      $(".over-alert").slideDown(250);
+    }
 
 
     console.log("form has been submitted!");
