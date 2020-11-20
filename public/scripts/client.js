@@ -95,11 +95,18 @@ const data = [
 
   renderTweets(data);
 
-  const $formButton = $(".submitButton");
+  //const $formButton = $(".submitButton");
   
-  $formButton.on('click', function(event) {
+  $(".tweet-form").submit(function(event) {
     event.preventDefault();
     console.log("form has been submitted!");
+    console.log(event);
+    $.ajax({url: "/tweets", 
+          type: "POST",
+          data: $(this).serialize()})
+      .then((response) => {
+        console.log("success!")
+      })
   })
 
  });
