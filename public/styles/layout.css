@@ -35,3 +35,21 @@ html {
    flex-direction: column;
    align-items: center;
  }
+
+ /* Responsive styling to change layout on large screens */
+@media only screen and (min-width: 1024px) {
+
+  .container {
+    width: 100%;
+  }
+
+  .header-main-wrapper {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: yellow;
+  }
+
+}
+ 
