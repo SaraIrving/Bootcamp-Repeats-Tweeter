@@ -55,7 +55,7 @@
   // this function returns the html structure of the individual tweets
   const createTweetElement = function(tweetObject) {
 
-    console.log("tweetObject = ", tweetObject)
+    console.log("createTweet runs, tweetObject = ", tweetObject)
   
     const $tweet = `
                     <article class="tweet-article">
@@ -85,9 +85,11 @@
 
   // this function renders all the posted tweets in the tweet-container section tag
   const renderTweets = function(tweetArray) {
+    console.log("render tweets runs tweetArray = ", tweetArray)
     //loop through array and pull out each tweet object
     for (let tweetObj of tweetArray) {
       // create the html for that tweet
+      console.log("in RENDER TWEETS, tweetOBJ = ", tweetObj)
       const $tweet = createTweetElement(tweetObj);
 
       // append it to the tweet-container 
@@ -121,7 +123,7 @@
             dataType: "json"})
       .then((res) => {
         console.log('res = ', res)
-        renderTweets(res);
+        renderTweets(res[0]);
       })
          
   }
