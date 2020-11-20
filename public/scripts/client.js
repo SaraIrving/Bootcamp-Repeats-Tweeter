@@ -95,4 +95,11 @@ const data = [
 
   renderTweets(data);
 
+  const $formButton = $(".submitButton");
+  
+  $formButton.on('click', function(event) {
+    event.preventDefault();
+    console.log("form has been submitted!");
+  })
+
  });
