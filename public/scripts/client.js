@@ -93,7 +93,7 @@
       const $tweet = createTweetElement(tweetObj);
 
       // append it to the tweet-container 
-      $(".tweet-container").append($tweet);
+      $(".tweet-container").prepend($tweet);
     };
   };
 
