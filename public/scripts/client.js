@@ -102,8 +102,17 @@
   // AJAX POST request to add new tweet 
   $(".tweet-form").submit(function(event) {
     event.preventDefault();
+
+    //validation
+    $(".empty-alert").slideUp(1000)
+
+ if($("#tweet-text").val().length <= 0) {
+   $(".empty-alert").slideDown(500)
+ }
+
+
     console.log("form has been submitted!");
-    console.log(event);
+    
     $.ajax({url: "/tweets", 
           type: "POST",
           data: $(this).serialize()})
