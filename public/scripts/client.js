@@ -108,8 +108,8 @@
           type: "POST",
           data: $(this).serialize()})
       .then((response) => {
-        console.log("success!")
-        //loadTweets()
+        console.log("success!");
+        loadTweets();
         
       });
   });
@@ -123,7 +123,8 @@
             dataType: "json"})
       .then((res) => {
         console.log('res = ', res)
-        renderTweets(res[0]);
+        $(".tweet-container").empty();
+        renderTweets(res);
       })
          
   }
