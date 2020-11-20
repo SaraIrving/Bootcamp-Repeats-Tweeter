@@ -56,7 +56,8 @@
   const createTweetElement = function(tweetObject) {
 
     console.log("createTweet runs, tweetObject = ", tweetObject)
-  
+    const safeText = $("<div>").text(tweetObject.content.text)[0].innerHTML;
+    console.log("**** safeText = ", safeText)
     const $tweet = `
                     <article class="tweet-article">
                     <header>
@@ -67,7 +68,7 @@
                       <p class="handle">${tweetObject.user.handle}</p>
                     </header>
                     <div class="tweet-body">
-                      <p>${tweetObject.content.text}</p>
+                      ${safeText}
                     </div>
                     <footer>
                       <p>${formatDate(tweetObject.created_at)}</p>
