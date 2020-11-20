@@ -109,14 +109,10 @@
 
     if($("#tweet-text").val().length <= 0) {
       $(".empty-alert").slideDown(250);
-    }
-
-    if($("#tweet-text").val().length > 140) {
+    } else if($("#tweet-text").val().length > 140) {
       $(".over-alert").slideDown(250);
-    }
-
-
-    console.log("form has been submitted!");
+    } else {
+      console.log("form has been submitted!");
     
     $.ajax({url: "/tweets", 
           type: "POST",
@@ -128,6 +124,8 @@
         $(".counter").val(140);
         
       });
+    }
+
   });
 
   // AJAX GET request to get all tweets 
