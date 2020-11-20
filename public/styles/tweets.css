@@ -1,4 +1,11 @@
 
+.tweet-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .tweet-article {
   border: 3px solid black;
   display: flex;
@@ -42,6 +49,10 @@
   border: none;
   border-bottom: 3px solid black;
   font-weight: 600;
+}
+
+.tweet-body p {
+  word-wrap: break-word;
 }
 
 .icons {
